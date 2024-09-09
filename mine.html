@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap to Score Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        #game-container {
+            text-align: center;
+            border: 2px solid #333;
+            padding: 50px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #score {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        #tap-button {
+            padding: 20px 40px;
+            font-size: 1.5em;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+        }
+        #tap-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="score">Score: 0</div>
+        <button id="tap-button">Tap Me!</button>
+    </div>
+
+    <script>
+        let score = 0;
+
+        document.getElementById('tap-button').addEventListener('click', function() {
+            score++;
+            document.getElementById('score').textContent = 'Score: ' + score;
+        });
+    </script>
+</body>
+</html>
