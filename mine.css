@@ -84,6 +84,26 @@ input:checked + .slider:before {-webkit-transform: translateX(26px);-ms-transfor
 .menu-links ul li.active a i{border-radius: 2px; background-color: var(--theme-color);  margin-right: 12px;}
 .light-theme .menu-links ul li.active a i{color: #fff;}
 
+/*nft-store-content styling starts*/
+.nft-store-content{width: 100%; margin: 0px 0px 32px 32px;}
+.fire-bubble-art{padding: 32px; background-color: var(--fire-bubble); border-radius: 16px;}
+.light-theme .fire-bubble-art{box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);}
+.fire-bubble-art .fire-image{border-radius: 16px;}
+.fire-bubble-art .fire-width{width: calc(100% / 2);}
+.fire-bubble-art .fire-content{padding-left: 32px;}
+.light-theme .fire-content .fire-time{box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);}
+.fire-content .fire-time{ position: relative; margin: 16px 0px 24px; background: var(--light-grey); padding: 32px; border-radius: 20px;}
+.fire-content .fire-time .middle-line{position: absolute; height: 60%; left: 48%; top: 50%; transform: translate(-50%, -50%); background: var(--white-color); width: 1px;}
+.fire-content .fire-time h4{margin-bottom: 6px;}
+.fire-content .fire-time span{font-size: 22px; line-height: 30px; font-weight: 500;}
+.fire-content .fire-user img{margin-right: 5px;}
+.fire-content .fire-links{margin-top: 24px;}
+.fire-content .fire-links .heart{width: 42px; height: 42px; margin-right: 22px; text-align: center; padding: 9px 0px; border-radius: 6px; transition: all 0.5s; font-size: 22px; -webkit-transition: all 0.5s; border: 1px solid var(--white-color); color: var(--white-color);} 
+.fire-content .fire-links .heart:hover{background: var(--theme-color); border: 1px solid var(--theme-color); color: #fff;}
+/*paint art styling starts*/
+.paint-image{position: relative; margin-bottom: 0px; padding-top: 96%; border-radius: 16px;}
+.paint-image h1{position: absolute; margin: 0px; right: 20px; bottom: 30px;}
+
 /*trending styling starts*/
 .trending-title{margin: 32px 0px;}
 .trending-title h2{margin-bottom: 0px;}
