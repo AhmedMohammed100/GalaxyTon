@@ -289,3 +289,146 @@ input:checked + .slider:before {-webkit-transform: translateX(26px);-ms-transfor
     .trending-desc .bid h5{margin-bottom: 4px;}
     .trending-desc .bid span{font-size: 16px; line-height: 24px;}
 }
+
+#login-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+#login-container h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+#login-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+#login-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+#streak {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+#claim-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+#points {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #28a745;
+}
+#claim-button {
+    padding: 20px 40px;
+    font-size: 1.5em;
+    color: #c2dbec;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+#claim-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+#timer {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+#game-container {
+    text-align: center;
+    border: 2px solid #333;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#score {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #28a745;
+}
+#tap-button {
+    padding: 20px 40px;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+#tap-button:hover {
+    background-color: #218838;
+}
+
+#leaderboard-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #218838;
+        }
