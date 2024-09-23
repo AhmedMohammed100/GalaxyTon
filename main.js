@@ -15,4 +15,45 @@ $(document).ready(function () {
       document.body.classList.toggle("dark-theme");
     });
   });
-  
+
+  let miningActive = false;
+let miningInterval;
+let balance = 0;
+let wBig = 0;
+
+const balanceDisplay = document.getElementById('balance');
+const statusDisplay = document.getElementById('status');
+const mineButton = document.getElementById('mine-btn');
+const collectButton = document.getElementById('collect-btn');
+
+// Function to start mining
+mineButton.addEventListener('click', function () {
+  if (!miningActive) {
+    miningActive = true;
+    mineButton.innerHTML = 'Stop Mining';
+    statusDisplay.innerHTML = 'Mining started...';
+
+    // Start mining process (earn 1 coin every second)
+    miningInterval = setInterval(() => {
+      wBig++;
+      statusDisplay.innerHTML = `You have mined ${wBig} wBig.`;
+    }, 1000);
+  } else {
+    miningActive = false;
+    mineButton.innerHTML = 'Start Mining';
+    statusDisplay.innerHTML = 'Mining stopped.';
+    clearInterval(miningInterval);
+  }
+});
+
+// Function to collect mined coins and update balance
+collectButton.addEventListener('click', function () {
+  if (wBig > 0) {
+    balance += wBig;
+    balanceDisplay.innerHTML = balance;
+    statusDisplay.innerHTML = `You collected ${wBig} wBig!`;
+    wBig = 0;
+  } else {
+    statusDisplay.innerHTML = 'No coins to collect!';
+  }
+});
