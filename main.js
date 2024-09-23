@@ -14,12 +14,10 @@ $(document).ready(function () {
     themeSwitch.addEventListener("change", () => {
       document.body.classList.toggle("dark-theme");
     });
-  });
-
-  let miningActive = false;
+    let miningActive = false;
 let miningInterval;
 let balance = 0;
-let wBig = 0;
+let minedCoins = 0;
 
 const balanceDisplay = document.getElementById('balance');
 const statusDisplay = document.getElementById('status');
@@ -35,8 +33,8 @@ mineButton.addEventListener('click', function () {
 
     // Start mining process (earn 1 coin every second)
     miningInterval = setInterval(() => {
-      wBig++;
-      statusDisplay.innerHTML = `You have mined ${wBig} wBig.`;
+      minedCoins++;
+      statusDisplay.innerHTML = `You have mined ${minedCoins} coins.`;
     }, 1000);
   } else {
     miningActive = false;
@@ -48,12 +46,15 @@ mineButton.addEventListener('click', function () {
 
 // Function to collect mined coins and update balance
 collectButton.addEventListener('click', function () {
-  if (wBig > 0) {
-    balance += wBig;
+  if (minedCoins > 0) {
+    balance += minedCoins;
     balanceDisplay.innerHTML = balance;
-    statusDisplay.innerHTML = `You collected ${wBig} wBig!`;
-    wBig = 0;
+    statusDisplay.innerHTML = `You collected ${minedCoins} coins!`;
+    minedCoins = 0;
   } else {
     statusDisplay.innerHTML = 'No coins to collect!';
   }
 });
+  });
+
+  
