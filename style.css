@@ -20,6 +20,9 @@
     --light-grey: rgba(90, 94, 104, 0.5);
     --deam-white: rgba(255, 255, 255, 0.5); 
 }
+#back {
+    background-image: url(images/premium_photo-1671829480432-9b0f10d869ef.avif);
+}
 
 *{margin: 0px; padding: 0px; box-sizing: border-box;}
 body{background-color: var(--body-color); color: var(--white-color); font-family: 'Manrope', sans-serif; font-size: 16px; line-height: 24px;}
