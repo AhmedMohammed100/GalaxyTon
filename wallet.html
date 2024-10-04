@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.1/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wallet.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-    <script defer src="main.js"></script>
-    <title>GalaxyTon</title>
+    <script defer src="wallet.js"></script>
+  <title>In-game Wallet</title>
 </head>
-<body class="light-theme dark-theme" id="back">
+  <body class="light-theme dark-theme" id="back">
     <header>
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -47,8 +47,8 @@
         <div class="nft-store-inner d-flex">
           <div class="menu-links">
             <ul>
-              <li class="nav-item active">
-                <a href="#" class="d-flex align-items-center nav-link"><i class="fa fa-home" aria-hidden="true"></i>
+              <li class="nav-item">
+                <a href="index.html" class="d-flex align-items-center nav-link"><i class="fa fa-home" aria-hidden="true"></i>
                   <span>Home</span></a>
               </li>
               <li class="nav-item">
@@ -59,7 +59,7 @@
                 <a href="#" class="d-flex align-items-center nav-link"><i class="fa fa-calendar" aria-hidden="true"></i>
                   <span>Daily Login</span></a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a href="wallet.html" class="d-flex align-items-center nav-link"><i class="fa fa-credit-card" aria-hidden="true"></i>
                   <span>Wallet Connect</span></a>
               </li>
@@ -73,21 +73,30 @@
               </li>
             </ul>
           </div>
-          <div class="container">
-            <h1>Big Farm</h1>
-            <div id="user-info">
-              <p><strong>User:</strong> <span id="username">User123</span></p>
-              <p><strong>Balance:</strong> <span id="balance">0</span> wBig</p>
-              <p><strong>Mining Rate:</strong> 1 wBig/second</p>
-            </div>
-            
-            <button id="mine-btn" class="btn">Start Mining</button>
-            <p id="status"></p>
-            
-            <button id="collect-btn" class="btn">Collect wBig</button>
-          </div>
-        
-          <script src="main.js"></script>
-        </body>
-        </html>
-        
+        <div class="container">
+    <h1>Wallet</h1>
+
+    <!-- Display Current Balance -->
+    <div class="balance-display">
+      <p>Current Balance: <span id="balance">0</span> Tokens</p>
+    </div>
+
+    <!-- Deposit Section -->
+    <div class="wallet-actions">
+      <input type="number" id="deposit-amount" placeholder="Deposit amount" />
+      <button onclick="deposit()">Deposit</button>
+    </div>
+
+    <!-- Withdraw Section -->
+    <div class="wallet-actions">
+      <input type="number" id="withdraw-amount" placeholder="Withdraw amount" />
+      <button onclick="withdraw()">Withdraw</button>
+    </div>
+
+    <!-- Error Message -->
+    <p id="error-message"></p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

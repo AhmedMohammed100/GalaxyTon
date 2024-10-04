@@ -3,24 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telegram Mining Bot</title>
+  <title>Mini TikTok App</title>
   <link rel="stylesheet" href="mine.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Telegram Mining Bot</h1>
-    <div id="user-info">
-      <p><strong>User:</strong> <span id="username">User123</span></p>
-      <p><strong>Balance:</strong> <span id="balance">0</span> coins</p>
-      <p><strong>Mining Rate:</strong> 1 coin/second</p>
+  <div class="app-container">
+    <!-- Video Feed -->
+    <div class="video-feed">
+      <div class="video-container" id="video1">
+        <video class="video" src="" autoplay loop muted></video>
+        <div class="controls">
+          <button class="like-btn" onclick="toggleLike(this)">❤️ Like</button>
+        </div>
+      </div>
+
+      <div class="video-container" id="video2">
+        <video class="video" src="" autoplay loop muted></video>
+        <div class="controls">
+          <button class="like-btn" onclick="toggleLike(this)">❤️ Like</button>
+        </div>
+      </div>
+
+      <!-- Add more videos here -->
     </div>
-    
-    <button id="mine-btn" class="btn">Start Mining</button>
-    <p id="status"></p>
-    
-    <button id="collect-btn" class="btn">Collect Coins</button>
   </div>
 
   <script src="mine.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini TikTok App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Video Feed -->
+    <div class="video-feed">
+      <div class="video-container" id="video1">
+        <video class="video" src="video1.mp4" autoplay loop muted></video>
+        <div class="controls">
+          <button class="like-btn" onclick="toggleLike(this)">❤️ Like</button>
+        </div>
+      </div>
+
+      <div class="video-container" id="video2">
+        <video class="video" src="video2.mp4" autoplay loop muted></video>
+        <div class="controls">
+          <button class="like-btn" onclick="toggleLike(this)">❤️ Like</button>
+        </div>
+      </div>
+
+      <!-- Add more videos here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
