@@ -14,7 +14,7 @@ export default function RootLayout({
         <title>Big Farm Wallet Connect</title>
       </head>
       <body>
-        <TonConnectUIProvider manifestUrl="https://t.me/realgalaxyton_bot/galaxybot">
+        <TonConnectUIProvider manifestUrl="https://ahmedmohammed100.github.io/GalaxyTon/">
         {children}
         </TonConnectUIProvider>
       </body>
