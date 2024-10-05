@@ -14,7 +14,7 @@ export default function RootLayout({
         <title>Big Farm Wallet Connect</title>
       </head>
       <body>
-        <TonConnectUIProvider manifestUrl="https://mega.nz/file/5L0HEbLB#6mqiNA-rrM_HMtAz6JJW6FlNGGNYgavGBYLuJnAp9gI">
+        <TonConnectUIProvider manifestUrl="https://mega.nz/file/9eFSESyJ#T7DxaCv4tz-NoGc09YWo3fROjumprBvAahaujycprKc">
         {children}
         </TonConnectUIProvider>
       </body>
