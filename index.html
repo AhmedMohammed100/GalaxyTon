@@ -56,11 +56,11 @@
                   <span>Tasks</span></a>
               </li>
               <li class="nav-item">
-                <a href="#" class="d-flex align-items-center nav-link"><i class="fa fa-calendar" aria-hidden="true"></i>
+                <a href="dailylogin.html" class="d-flex align-items-center nav-link"><i class="fa fa-calendar" aria-hidden="true"></i>
                   <span>Daily Login</span></a>
               </li>
               <li class="nav-item">
-                <a href="https://mywallet-blue.vercel.app/.." class="d-flex align-items-center nav-link"><i class="fa fa-credit-card" aria-hidden="true"></i>
+                <a href="https://mywallet-blue.vercel.app/" class="d-flex align-items-center nav-link"><i class="fa fa-credit-card" aria-hidden="true"></i>
                   <span>Wallet Connect</span></a>
               </li>
               <li class="nav-item">
@@ -73,19 +73,22 @@
               </li>
             </ul>
           </div>
-          <div class="container">
-            <h1>Big Farm</h1>
-            <div id="user-info">
-              <p><strong>User:</strong> <span id="username">User123</span></p>
-              <p><strong>Balance:</strong> <span id="balance">0</span> wBig</p>
-              <p><strong>Mining Rate:</strong> 1 wBig/second</p>
+          <div id="quiz-container">
+            <div id="question-container">
+                <h2 id="question">Question</h2>
+                <ul id="answer-buttons">
+                    <li><button class="answer-btn">Answer 1</button></li>
+                    <li><button class="answer-btn">Answer 2</button></li>
+                    <li><button class="answer-btn">Answer 3</button></li>
+                    <li><button class="answer-btn">Answer 4</button></li>
+                </ul>
             </div>
-            
-            <button id="mine-btn" class="btn">Start Mining</button>
-            <p id="status"></p>
-            
-            <button id="collect-btn" class="btn">Collect wBig</button>
-          </div>
+            <div id="controls">
+                <button id="next-btn" class="hide">Next</button>
+                <p id="score">Score: 0</p>
+            </div>
+        </div>
+    </div>
         
           <script src="main.js"></script>
         </body>
