@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dailylogin.css">
+    <link rel="stylesheet" href="Invite.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-    <script defer src="dailylogin.js"></script>
+    <script defer src="Invite.js"></script>
+    <title>Big Farm Invite</title>
 </head>
 <body class="light-theme dark-theme" id="back">
     <header>
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg navbar-light">
             <div class="header-inner d-flex justify-content-between align-items-center">
-              <a class="navbar-brand flex-shrink-0" href="#"> Big Farm
+              <a class="navbar-brand flex-shrink-0" href="#"> Big Farm Friends
                 </a>
               <div class="header-content d-flex align-items-center justify-content-end">
                 <form class="d-flex justify-content-end align-items-center">
@@ -46,15 +47,15 @@
           <div class="nft-store-inner d-flex">
             <div class="menu-links">
               <ul>
-                <li class="nav-item">
-                  <a href="index.html" class="d-flex align-items-center nav-link"><i class="fa fa-home" aria-hidden="true"></i>
+                <li class="nav-item active">
+                  <a href="#" class="d-flex align-items-center nav-link"><i class="fa fa-home" aria-hidden="true"></i>
                     <span>Home</span></a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="d-flex align-items-center nav-link"><i class="fa fa-tasks" aria-hidden="true"></i>
                     <span>Tasks</span></a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a href="dailylogin.html" class="d-flex align-items-center nav-link"><i class="fa fa-calendar" aria-hidden="true"></i>
                     <span>Daily Login</span></a>
                 </li>
@@ -63,7 +64,7 @@
                     <span>Wallet Connect</span></a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="d-flex align-items-center nav-link"><i class="fa fa-money" aria-hidden="true"></i>
+                  <a href="Invite.html" class="d-flex align-items-center nav-link"><i class="fa fa-money" aria-hidden="true"></i>
                     <span>Friends</span></a>
                 </li>
                 <li class="nav-item">
@@ -72,12 +73,24 @@
                 </li>
               </ul>
             </div>
-            <div class="container">
-                <h1>Daily Login</h1>
-                <button id="daily-login-btn">Claim Daily Reward</button>
-                <p id="login-status"></p>
-                <p class="points">Total Points: <span id="points">0</span></p>
+    <div class="invite-container">
+        <div class="game-title">
+            <h1>Invite</h1>
+        </div>
+        <div class="invite-message">
+            <p>Invite your friends to join the battle and show your dominance in crypto knowledge</p>
+        </div>
+        <div class="invite-code-section">
+            <p>Your Invite Link:</p>
+            <div class="invite-link" id="invite-link">Generating invite link...</div>
+            <button id="copy-btn" onclick="copyLink()">Copy Invite Link</button>
+        </div>
+        <div class="invite-options">
+            <button class="invite-button" id="telegram-btn">Invite via Telegram</button>
+            <button class="invite-button" id="whatsapp-btn">Invite via WhatsApp</button>
+        </div>
     </div>
-            </div>
+    
+    <script src="Invite.js"></script>
 </body>
 </html>
