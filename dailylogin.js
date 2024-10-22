@@ -14,7 +14,7 @@ $(document).ready(function () {
     themeSwitch.addEventListener("change", () => {
       document.body.classList.toggle("dark-theme");
     });
-
+})
     const loginButton = document.getElementById('daily-login-btn');
     const loginStatus = document.getElementById('login-status');
     const pointsDisplay = document.getElementById('points');
@@ -74,4 +74,3 @@ $(document).ready(function () {
             disableLogin();
         }
     });
-    })

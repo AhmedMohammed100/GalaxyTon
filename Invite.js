@@ -49,7 +49,7 @@ function updateInviteLink() {
         window.open(inviteLink, '_blank');
     };
     document.getElementById("whatsapp-btn").onclick = () => {
-        const whatsappLink = `https://wa.me/?text=Join%20Hamster%20Kombat%20via%20this%20link%3A%20${encodeURIComponent(inviteLink)}`;
+        const whatsappLink = `https://wa.me/?text=Join%20Big%20Farm%20via%20this%20link%3A%20${encodeURIComponent(inviteLink)}`;
         window.open(whatsappLink, '_blank');
     };
 }
