@@ -281,4 +281,53 @@ $(document).ready(function () {
     // Start the quiz
     initializeGame();
     
+
+    // main.js (Quiz)
+
+let quizScore = 0;
+const combinedScoreElement = document.getElementById('combined-score'); // Where the combined score will be displayed
+
+// Load score from localStorage or initialize to 0
+function loadQuizScore() {
+    const savedScore = localStorage.getItem('cryptoQuizScore');
+    return savedScore ? parseInt(savedScore) : 0;
+}
+
+// Save quiz score to localStorage
+function saveQuizScore() {
+    localStorage.setItem('cryptoQuizScore', quizScore);
+}
+
+// Function to get the daily login score
+function getDailyLoginScore() {
+    const dailyLoginScore = localStorage.getItem('dailyLoginScore');
+    return dailyLoginScore ? parseInt(dailyLoginScore) : 0;
+}
+
+// Combine the quiz score and daily login score
+function updateCombinedScore() {
+    const dailyLoginScore = getDailyLoginScore();
+    const combinedScore = quizScore + dailyLoginScore;
+    
+    // Display the combined score at the top of the page
+    combinedScoreElement.innerText = `Total Score: ${combinedScore}`;
+}
+
+// Call this function whenever the quiz score changes
+function addQuizPoints(points) {
+    quizScore += points;
+    saveQuizScore();
+    updateCombinedScore(); // Update combined score whenever quiz points are updated
+}
+
+// Initialize quiz and display the combined score at the start
+function initializeQuiz() {
+    quizScore = loadQuizScore(); // Load quiz score
+    updateCombinedScore(); // Update combined score at the start
+    startQuiz(); // Function to start the quiz logic
+}
+
+// Start the quiz when the page loads
+initializeQuiz();
+
 })    

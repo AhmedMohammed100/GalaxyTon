@@ -73,4 +73,40 @@ $(document).ready(function () {
         if (hasLoggedInToday()) {
             disableLogin();
         }
+
+        // dailylogin.js (Daily Login)
+
+let dailyLoginScore = 0;
+
+// Load daily login score from localStorage or initialize to 0
+function loadDailyLoginScore() {
+    const savedDailyLoginScore = localStorage.getItem('dailyLoginScore');
+    return savedDailyLoginScore ? parseInt(savedDailyLoginScore) : 0;
+}
+
+// Save daily login score to localStorage
+function saveDailyLoginScore() {
+    localStorage.setItem('dailyLoginScore', dailyLoginScore);
+}
+
+// Add daily login points and update the score
+function addDailyLoginPoints(points) {
+    dailyLoginScore += points;
+    saveDailyLoginScore();
+    
+    // Update the combined score in main.js (by calling the shared function)
+    if (typeof updateCombinedScore === 'function') {
+        updateCombinedScore(); // Call the update function from main.js
+    }
+}
+
+// Initialize daily login and update score
+function initializeDailyLogin() {
+    dailyLoginScore = loadDailyLoginScore(); // Load daily login score
+    addDailyLoginPoints(5); // Example: Add 5 points for today's login
+}
+
+// Start the daily login process
+initializeDailyLogin();
+
     });

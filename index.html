@@ -73,24 +73,18 @@
               </li>
             </ul>
           </div>
-          <div id="quiz-container">
-            <div id="question-container">
-                <h2 id="question">Question</h2>
-                <ul id="answer-buttons">
-                    <li><button class="answer-btn">Answer 1</button></li>
-                    <li><button class="answer-btn">Answer 2</button></li>
-                    <li><button class="answer-btn">Answer 3</button></li>
-                    <li><button class="answer-btn">Answer 4</button></li>
-                </ul>
-            </div>
-            <div id="controls">
-                <button id="next-btn" class="hide">Next</button>
-                <p id="score">Score: 0</p>
-            </div>
+          <div id="combined-score">Total Score: 0</div> <!-- Display combined score here -->
+    <div id="quiz-container">
+        <h2 id="question">Question will appear here</h2>
+        <div id="answer-buttons" class="btn-grid">
+            <!-- Answer buttons will be added here dynamically -->
         </div>
+        <p id="score">Score: 0</p>
+        <p id="timer" style="display: none;"></p>
     </div>
-        
-          <script src="main.js"></script>
+    
+    <script src="dailylogin.js"></script> <!-- Include daily login script -->
+    <script src="main.js"></script> <!-- Include quiz script -->
         </body>
         </html>
         
