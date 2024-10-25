@@ -74,8 +74,7 @@ $(document).ready(function () {
             disableLogin();
         }
 
-    // dailylogin.js (Daily Login)
-
+// dailylogin.js (Daily Login)
 let dailyLoginScore = 0;
 
 // Load daily login score from localStorage or initialize to 0
@@ -94,23 +93,17 @@ function addDailyLoginPoints(points) {
     dailyLoginScore += points;
     saveDailyLoginScore();
     
-    // Display the daily login score separately in the daily login page (if applicable)
+    // Display daily login score on the daily login page
     const dailyLoginScoreElement = document.getElementById('daily-login-score');
     if (dailyLoginScoreElement) {
-        dailyLoginScoreElement.innerText = `Daily Login Points: ${dailyLoginScore}`;
-    }
-
-    // Update the combined score in main.js (by calling the shared function)
-    if (typeof updateScores === 'function') {
-        updateScores(); // Call the update function from main.js
+        dailyLoginScoreElement.innerText = `Total Points: ${dailyLoginScore}`;
     }
 }
 
-// Initialize daily login and update score
+// Initialize daily login
 function initializeDailyLogin() {
-    dailyLoginScore = loadDailyLoginScore(); // Load daily login score
-    // Example: Add 5 points for today's login
-    addDailyLoginPoints(5); 
+    dailyLoginScore = loadDailyLoginScore(); // Load stored points
+    addDailyLoginPoints(30); // Example: Add 30 points for logging in today
 }
 
 // Start the daily login process when the page loads

@@ -284,7 +284,7 @@ $(document).ready(function () {
 
  // main.js (Quiz)
 
-let quizScore = 0;
+let quizScore = 0; // Default score
 const combinedScoreElement = document.getElementById('combined-score'); // Combined score displayed here
 const quizScoreElement = document.getElementById('quiz-score'); // Quiz points displayed separately here
 const dailyLoginScoreElement = document.getElementById('daily-login-score'); // Daily login points displayed separately here
@@ -300,7 +300,7 @@ function saveQuizScore() {
     localStorage.setItem('cryptoQuizScore', quizScore);
 }
 
-// Function to get the daily login score from localStorage
+// Function to get daily login score from localStorage
 function getDailyLoginScore() {
     const dailyLoginScore = localStorage.getItem('dailyLoginScore');
     return dailyLoginScore ? parseInt(dailyLoginScore) : 0;
@@ -315,27 +315,26 @@ function updateScores() {
     dailyLoginScoreElement.innerText = `Daily Login Points: ${dailyLoginScore}`;
     quizScoreElement.innerText = `Quiz Points: ${quizScore}`;
     
-    // Combine the quiz score and daily login score
+    // Combine quiz and daily login scores
     const combinedScore = quizScore + dailyLoginScore;
     combinedScoreElement.innerText = `Total Score: ${combinedScore}`;
 }
 
-// Call this function whenever the quiz score changes
+// Function to add quiz points and update scores
 function addQuizPoints(points) {
     quizScore += points;
     saveQuizScore();
-    updateScores(); // Update combined score whenever quiz points are updated
+    updateScores(); // Update the combined score
 }
 
 // Initialize quiz and display the combined score at the start
 function initializeQuiz() {
-    quizScore = loadQuizScore(); // Load quiz score
+    quizScore = loadQuizScore(); // Load saved quiz score
     updateScores(); // Update combined score at the start
-    startQuiz(); // Function to start the quiz logic
+    startQuiz(); // Function to start the quiz
 }
 
-// Start the quiz when the page loads
+// Call this function to start
 initializeQuiz();
-
 
 })    
