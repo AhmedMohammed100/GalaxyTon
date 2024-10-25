@@ -278,16 +278,14 @@ $(document).ready(function () {
         startGame(); // Start the quiz
     }
     
-    // Start the quiz
-    initializeGame();
-    
 
     // main.js (Quiz)
 
 let quizScore = 0;
 const combinedScoreElement = document.getElementById('combined-score'); // Where the combined score will be displayed
+const quizScoreElement = document.getElementById('quiz-score'); // Where quiz score will be displayed separately
 
-// Load score from localStorage or initialize to 0
+// Load quiz score from localStorage or initialize to 0
 function loadQuizScore() {
     const savedScore = localStorage.getItem('cryptoQuizScore');
     return savedScore ? parseInt(savedScore) : 0;
@@ -298,7 +296,7 @@ function saveQuizScore() {
     localStorage.setItem('cryptoQuizScore', quizScore);
 }
 
-// Function to get the daily login score
+// Function to get the daily login score from localStorage
 function getDailyLoginScore() {
     const dailyLoginScore = localStorage.getItem('dailyLoginScore');
     return dailyLoginScore ? parseInt(dailyLoginScore) : 0;
@@ -323,6 +321,7 @@ function addQuizPoints(points) {
 // Initialize quiz and display the combined score at the start
 function initializeQuiz() {
     quizScore = loadQuizScore(); // Load quiz score
+    quizScoreElement.innerText = `Quiz Points: ${quizScore}`;
     updateCombinedScore(); // Update combined score at the start
     startQuiz(); // Function to start the quiz logic
 }
