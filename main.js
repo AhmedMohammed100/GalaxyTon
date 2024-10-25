@@ -278,6 +278,9 @@ $(document).ready(function () {
         startGame(); // Start the quiz
     }
     
+    // Start the quiz
+    initializeGame();
+    
 
     // main.js (Quiz)
 
