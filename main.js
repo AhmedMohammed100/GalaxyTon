@@ -282,11 +282,12 @@ $(document).ready(function () {
     initializeGame();
     
 
-    // main.js (Quiz)
+ // main.js (Quiz)
 
 let quizScore = 0;
-const combinedScoreElement = document.getElementById('combined-score'); // Where the combined score will be displayed
-const quizScoreElement = document.getElementById('quiz-score'); // Where quiz score will be displayed separately
+const combinedScoreElement = document.getElementById('combined-score'); // Combined score displayed here
+const quizScoreElement = document.getElementById('quiz-score'); // Quiz points displayed separately here
+const dailyLoginScoreElement = document.getElementById('daily-login-score'); // Daily login points displayed separately here
 
 // Load quiz score from localStorage or initialize to 0
 function loadQuizScore() {
@@ -305,12 +306,17 @@ function getDailyLoginScore() {
     return dailyLoginScore ? parseInt(dailyLoginScore) : 0;
 }
 
-// Combine the quiz score and daily login score
-function updateCombinedScore() {
+// Function to update all scores (daily login, quiz, and combined)
+function updateScores() {
+    // Get daily login score from localStorage
     const dailyLoginScore = getDailyLoginScore();
-    const combinedScore = quizScore + dailyLoginScore;
     
-    // Display the combined score at the top of the page
+    // Display the separate scores
+    dailyLoginScoreElement.innerText = `Daily Login Points: ${dailyLoginScore}`;
+    quizScoreElement.innerText = `Quiz Points: ${quizScore}`;
+    
+    // Combine the quiz score and daily login score
+    const combinedScore = quizScore + dailyLoginScore;
     combinedScoreElement.innerText = `Total Score: ${combinedScore}`;
 }
 
@@ -318,18 +324,18 @@ function updateCombinedScore() {
 function addQuizPoints(points) {
     quizScore += points;
     saveQuizScore();
-    updateCombinedScore(); // Update combined score whenever quiz points are updated
+    updateScores(); // Update combined score whenever quiz points are updated
 }
 
 // Initialize quiz and display the combined score at the start
 function initializeQuiz() {
     quizScore = loadQuizScore(); // Load quiz score
-    quizScoreElement.innerText = `Quiz Points: ${quizScore}`;
-    updateCombinedScore(); // Update combined score at the start
+    updateScores(); // Update combined score at the start
     startQuiz(); // Function to start the quiz logic
 }
 
 // Start the quiz when the page loads
 initializeQuiz();
+
 
 })    
